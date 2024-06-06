@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .faq {
+            margin-top: 30px;
+        }
+        .faq-item {
+            border-bottom: 1px solid #ddd;
+            padding: 20px 0;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-question {
+            font-size: 1.2em;
+            color: #333;
+            cursor: pointer;
+        }
+        .faq-answer {
+            display: none;
+            margin-top: 10px;
+            color: #666;
+        }
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>FAQ</h1>
+        <div class="faq">
+            <div class="faq-item">
+                <div class="faq-question">O que é este serviço?</div>
+                <div class="faq-answer">Este serviço oferece soluções para suas necessidades diárias, desde informações até ferramentas úteis.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Como posso me cadastrar?</div>
+                <div class="faq-answer">Você pode se cadastrar clicando no botão de cadastro no canto superior direito e preenchendo o formulário necessário.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Quais são os métodos de pagamento aceitos?</div>
+                <div class="faq-answer">Aceitamos cartões de crédito, débito, e pagamentos via transferência bancária.</div>
+            </div>
+            <!-- Adicione mais itens de FAQ conforme necessário -->
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                item.querySelector('.faq-question').addEventListener('click', () => {
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
